@@ -1,0 +1,23 @@
+{
+	"name" : "relaypoint/relaypoint-core",
+	"description": "Generic relay point finding : core classes",
+	"license": "MIT",
+	"type": "library",
+    "authors": [
+        {
+            "name": "Pierre Feyssaguet",
+            "email": "pfeyssaguet@gmail.com"
+        }
+    ],
+	"autoload" : {
+		"psr-0": {
+			"RelayPoint\\Core" : "src/"
+		}
+	},
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
