@@ -20,4 +20,12 @@ class Address
     {
         return $this->fields;
     }
+
+    public function getField($name)
+    {
+        if (!isset($this->fields[$name])) {
+            return '';
+        }
+        return $this->fields[$name];
+    }
 }

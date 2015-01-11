@@ -1,5 +1,5 @@
 {
-	"name" : "relaypoint/relaypoint-core",
+	"name" : "relaypoint/core",
 	"description": "Generic relay point finding : core classes",
 	"license": "MIT",
 	"type": "library",
