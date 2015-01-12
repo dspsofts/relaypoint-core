@@ -61,8 +61,8 @@ abstract class AbstractGateway implements GatewayInterface
         $this->setParameter('country', $country);
     }
 
-    public function getCountry($country)
+    public function getCountry()
     {
-        return $this->getParameter($country);
+        return $this->getParameter('country');
     }
 }
