@@ -20,4 +20,23 @@ interface GatewayInterface
     public function initialize(array $parameters = array());
 
     public function getParameters();
+
+    /**
+     * Returns the list of the relay points for a specific search.
+     *
+     * @param array $fields Search fields
+     * @param boolean $active Turn to false if you only want active relay points
+     * @return Address[]
+     * @throws RelayPointException
+     */
+    public function search(array $fields, $active = true);
+
+    /**
+     * Returns the details of one specific relay point.
+     *
+     * @param array $fields Search fields
+     * @return Address|null
+     * @throws RelayPointException
+     */
+    public function detail(array $fields);
 }
