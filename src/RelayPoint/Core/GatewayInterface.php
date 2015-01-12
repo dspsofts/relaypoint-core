@@ -21,6 +21,10 @@ interface GatewayInterface
 
     public function getParameters();
 
+    public function getParameter($name);
+
+    public function setParameter($name, $value);
+
     /**
      * Returns the list of the relay points for a specific search.
      *
