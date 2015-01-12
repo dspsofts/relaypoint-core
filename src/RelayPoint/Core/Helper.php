@@ -50,6 +50,26 @@ class Helper
     }
 
     /**
+     * Resolve a gateway class to a short name.
+     *
+     * The short name can be used with GatewayFactory as an alias of the gateway class,
+     * to create new instances of a gateway.
+     *
+     * @param string $className Gateway class name
+     * @return string The gateway short name
+     */
+    public static function getGatewayShortName($className)
+    {
+        if (0 === strpos($className, '\\')) {
+            $className = substr($className, 1);
+        }
+        if (0 === strpos($className, 'RelayPoint\\')) {
+            return trim(str_replace('\\', '_', substr($className, 8, -7)), '_');
+        }
+        return '\\'.$className;
+    }
+
+    /**
      * Resolve a short gateway name to a full namespaced gateway class.
      *
      * Class names beginning with a namespace marker (\) are left intact.
@@ -59,7 +79,7 @@ class Helper
      *      \Custom_Gateway     => \Custom_Gateway
      *      Kiala               => \RelayPoint\Kiala\Gateway
      *
-     * @param  string $shortName The short gateway name
+     * @param string $shortName The short gateway name
      * @return string The fully namespaced gateway class name
      */
     public static function getGatewayClassName($shortName)

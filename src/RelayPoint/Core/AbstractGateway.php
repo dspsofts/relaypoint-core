@@ -18,6 +18,11 @@ abstract class AbstractGateway implements GatewayInterface
         $this->initialize();
     }
 
+    public function getShortName()
+    {
+        return Helper::getGatewayShortName(get_class($this));
+    }
+
     public function initialize(array $parameters = array())
     {
         foreach ($this->getDefaultParameters() as $name => $value) {
