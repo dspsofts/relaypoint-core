@@ -39,6 +39,12 @@ class GatewayFactory
         return $this->all();
     }
 
+    /**
+     * Creates an instance of a gateway.
+     *
+     * @param string $class Gateway class name
+     * @return GatewayInterface
+     */
     public function create($class)
     {
         $class = Helper::getGatewayClassName($class);
