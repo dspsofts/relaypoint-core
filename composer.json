@@ -10,8 +10,8 @@
         }
     ],
 	"autoload" : {
-		"psr-0": {
-			"RelayPoint\\Core" : "src/"
+		"psr-4": {
+			"RelayPoint\\Core\\" : "src/"
 		}
 	},
 	"require": {
